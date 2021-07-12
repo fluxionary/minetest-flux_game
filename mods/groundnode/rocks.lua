@@ -1,18 +1,16 @@
 local this = groundnode
-local stone_sounds = default.node_sound_stone_defaults()
 
 local function register_rock(name, hardness, groups)
     groups.cracky = math.max(3 - hardness, 1)
     groups.stone = 1
     groups.level = hardness
 
-    minetest.register_node(("%:%s"):format(this.modname, name), {
+    minetest.register_node(("%s:%s"):format(this.modname, name), {
         description = name:gsub("_", " "):gsub("(%a)(%a*)", function(c, r)
             return c:upper() .. r
         end),
         tiles = { ("%s_%s.png"):format(this.modname, name) },
         groups = groups,
-        sounds = stone_sounds,
     })
 end
 
@@ -30,7 +28,6 @@ register_rock("granite", 2, { igneous = 1, felsic = 1, intrusive = 1 })
 register_rock("pumice", 1, { igneous = 1, felsic = 1, extrusive = 1 })
 register_rock("scoria", 1, { igneous = 1, felsic = 1, extrusive = 1 })
 register_rock("tuff", 1, { igneous = 1, felsic = 2, extrusive = 1 })
-register_rock("pink_tuff", 1, { igneous = 1, felsic = 2, extrusive = 1 })
 
 register_rock("nepheline_syenite", 2, { igneous = 1, alkali = 1, extrusive = 1 })
 register_rock("phonolite", 2, { igneous = 1, alkali = 1, intrusive = 1 })
@@ -85,9 +82,9 @@ register_rock("marble", 1, { metamorphic = 1, carbonate = 1, mregional = 1, mtem
 
 
 
-register_sand("white_sand")
-register_sand("pink_sand")
-register_sand("yellow_sand")
-register_sand("red_sand")
-register_sand("black_sand")
-register_sand("gravel")
+--register_sand("white_sand")
+--register_sand("pink_sand")
+--register_sand("yellow_sand")
+--register_sand("red_sand")
+--register_sand("black_sand")
+--register_sand("gravel")
