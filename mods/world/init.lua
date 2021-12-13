@@ -1,7 +1,7 @@
 local modname = minetest.get_current_modname()
 local modpath = minetest.get_modpath(modname)
 
-worldnode = {
+world = {
     modname = modname,
     modpath = modpath,
     translator = minetest.get_translator(modname    ),

@@ -1,20 +1,20 @@
-local S = worldnode.translator
+local S = world.translator
 
 local function register_fluid(name, args)
-    minetest.register_node(("worldnode:%s_source"):format(name),
+    minetest.register_node(("world:%s_source"):format(name),
         args
     )
 end
 local function register_water()  end
 
 
-minetest.register_node("worldnode:water_source", {
+minetest.register_node("world:water_source", {
     description = S("Water Source"),
     drawtype = "liquid",
     waving = 3,
     tiles = {
         {
-            name = "worldnode_water_source_animated.png",
+            name = "world_water_source_animated.png",
             backface_culling = false,
             animation = {
                 type = "vertical_frames",
@@ -23,7 +23,7 @@ minetest.register_node("worldnode:water_source", {
                 length = 2.0,
             },
         }, {
-            name = "worldnode_water_source_animated.png",
+            name = "world_water_source_animated.png",
             backface_culling = true,
             animation = {
                 type = "vertical_frames",
@@ -43,22 +43,22 @@ minetest.register_node("worldnode:water_source", {
     drop = "",
     drowning = 1,
     liquidtype = "source",
-    liquid_alternative_flowing = "worldnode:water_flowing",
-    liquid_alternative_source = "worldnode:water_source",
+    liquid_alternative_flowing = "world:water_flowing",
+    liquid_alternative_source = "world:water_source",
     liquid_viscosity = 1,
     post_effect_color = { a = 103, r = 30, g = 60, b = 90 },
     groups = { water = 3, liquid = 3, cools_lava = 1 },
     sounds = nil, -- TODO
 })
 
-minetest.register_node("worldnode:water_flowing", {
+minetest.register_node("world:water_flowing", {
     description = S("Flowing Water"),
     drawtype = "flowingliquid",
     waving = 3,
-    tiles = { "worldnode_water.png" },
+    tiles = { "world_water.png" },
     special_tiles = {
         {
-            name = "worldnode_water_flowing_animated.png",
+            name = "world_water_flowing_animated.png",
             backface_culling = false,
             animation = {
                 type = "vertical_frames",
@@ -68,7 +68,7 @@ minetest.register_node("worldnode:water_flowing", {
             },
         },
         {
-            name = "worldnode_water_flowing_animated.png",
+            name = "world_water_flowing_animated.png",
             backface_culling = true,
             animation = {
                 type = "vertical_frames",
@@ -89,8 +89,8 @@ minetest.register_node("worldnode:water_flowing", {
     drop = "",
     drowning = 1,
     liquidtype = "flowing",
-    liquid_alternative_flowing = "worldnode:water_flowing",
-    liquid_alternative_source = "worldnode:water_source",
+    liquid_alternative_flowing = "world:water_flowing",
+    liquid_alternative_source = "world:water_source",
     liquid_viscosity = 1,
     post_effect_color = { a = 103, r = 30, g = 60, b = 90 },
     groups = { water = 3, liquid = 3, not_in_creative_inventory = 1,
@@ -98,12 +98,12 @@ minetest.register_node("worldnode:water_flowing", {
     sounds = nil, -- TODO
 })
 
-minetest.register_node("worldnode:river_water_source", {
+minetest.register_node("world:river_water_source", {
     description = S("River Water Source"),
     drawtype = "liquid",
     tiles = {
         {
-            name = "worldnode_river_water_source_animated.png",
+            name = "world_river_water_source_animated.png",
             backface_culling = false,
             animation = {
                 type = "vertical_frames",
@@ -113,7 +113,7 @@ minetest.register_node("worldnode:river_water_source", {
             },
         },
         {
-            name = "worldnode_river_water_source_animated.png",
+            name = "world_river_water_source_animated.png",
             backface_culling = true,
             animation = {
                 type = "vertical_frames",
@@ -133,8 +133,8 @@ minetest.register_node("worldnode:river_water_source", {
     drop = "",
     drowning = 1,
     liquidtype = "source",
-    liquid_alternative_flowing = "worldnode:river_water_flowing",
-    liquid_alternative_source = "worldnode:river_water_source",
+    liquid_alternative_flowing = "world:river_water_flowing",
+    liquid_alternative_source = "world:river_water_source",
     liquid_viscosity = 1,
     -- Not renewable to avoid horizontal spread of water sources in sloping
     -- rivers that can cause water to overflow riverbanks and cause floods.
@@ -147,13 +147,13 @@ minetest.register_node("worldnode:river_water_source", {
     sounds = nil, -- TODO
 })
 
-minetest.register_node("worldnode:river_water_flowing", {
+minetest.register_node("world:river_water_flowing", {
     description = S("Flowing River Water"),
     drawtype = "flowingliquid",
-    tiles = { "worldnode_river_water.png" },
+    tiles = { "world_river_water.png" },
     special_tiles = {
         {
-            name = "worldnode_river_water_flowing_animated.png",
+            name = "world_river_water_flowing_animated.png",
             backface_culling = false,
             animation = {
                 type = "vertical_frames",
@@ -163,7 +163,7 @@ minetest.register_node("worldnode:river_water_flowing", {
             },
         },
         {
-            name = "worldnode_river_water_flowing_animated.png",
+            name = "world_river_water_flowing_animated.png",
             backface_culling = true,
             animation = {
                 type = "vertical_frames",
@@ -184,8 +184,8 @@ minetest.register_node("worldnode:river_water_flowing", {
     drop = "",
     drowning = 1,
     liquidtype = "flowing",
-    liquid_alternative_flowing = "worldnode:river_water_flowing",
-    liquid_alternative_source = "worldnode:river_water_source",
+    liquid_alternative_flowing = "world:river_water_flowing",
+    liquid_alternative_source = "world:river_water_source",
     liquid_viscosity = 1,
     liquid_renewable = false,
     liquid_range = 2,
@@ -195,12 +195,12 @@ minetest.register_node("worldnode:river_water_flowing", {
     sounds = nil, -- TODO
 })
 
-minetest.register_node("worldnode:lava_source", {
+minetest.register_node("world:lava_source", {
     description = S("Lava Source"),
     drawtype = "liquid",
     tiles = {
         {
-            name = "worldnode_lava_source_animated.png",
+            name = "world_lava_source_animated.png",
             backface_culling = false,
             animation = {
                 type = "vertical_frames",
@@ -210,7 +210,7 @@ minetest.register_node("worldnode:lava_source", {
             },
         },
         {
-            name = "worldnode_lava_source_animated.png",
+            name = "world_lava_source_animated.png",
             backface_culling = true,
             animation = {
                 type = "vertical_frames",
@@ -230,8 +230,8 @@ minetest.register_node("worldnode:lava_source", {
     drop = "",
     drowning = 1,
     liquidtype = "source",
-    liquid_alternative_flowing = "worldnode:lava_flowing",
-    liquid_alternative_source = "worldnode:lava_source",
+    liquid_alternative_flowing = "world:lava_flowing",
+    liquid_alternative_source = "world:lava_source",
     liquid_viscosity = 7,
     liquid_renewable = false,
     damage_per_second = 4 * 2,
@@ -240,13 +240,13 @@ minetest.register_node("worldnode:lava_source", {
 
 })
 
-minetest.register_node("worldnode:lava_flowing", {
+minetest.register_node("world:lava_flowing", {
     description = S("Flowing Lava"),
     drawtype = "flowingliquid",
-    tiles = { "worldnode_lava.png" },
+    tiles = { "world_lava.png" },
     special_tiles = {
         {
-            name = "worldnode_lava_flowing_animated.png",
+            name = "world_lava_flowing_animated.png",
             backface_culling = false,
             animation = {
                 type = "vertical_frames",
@@ -256,7 +256,7 @@ minetest.register_node("worldnode:lava_flowing", {
             },
         },
         {
-            name = "worldnode_lava_flowing_animated.png",
+            name = "world_lava_flowing_animated.png",
             backface_culling = true,
             animation = {
                 type = "vertical_frames",
@@ -277,8 +277,8 @@ minetest.register_node("worldnode:lava_flowing", {
     drop = "",
     drowning = 1,
     liquidtype = "flowing",
-    liquid_alternative_flowing = "worldnode:lava_flowing",
-    liquid_alternative_source = "worldnode:lava_source",
+    liquid_alternative_flowing = "world:lava_flowing",
+    liquid_alternative_source = "world:lava_source",
     liquid_viscosity = 7,
     liquid_renewable = false,
     damage_per_second = 4 * 2,

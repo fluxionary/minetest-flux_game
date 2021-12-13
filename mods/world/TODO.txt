@@ -1,3 +1,6 @@
+A mod which defines various kinds of nodes you might find in your world.
+Does not do mapgen.
+
 TODO:
     multiple lavas for different silica content
     crude oil & mineral oil

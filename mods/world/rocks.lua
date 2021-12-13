@@ -3,11 +3,11 @@ local function register_rock(name, hardness, groups)
     groups.stone = 1
     groups.level = hardness
 
-    minetest.register_node(("%s:%s"):format(worldnode.modname, name), {
+    minetest.register_node(("%s:%s"):format(world.modname, name), {
         description = name:gsub("_", " "):gsub("(%a)(%a*)", function(c, r)
             return c:upper() .. r
         end),
-        tiles = { ("%s_%s.png"):format(worldnode.modname, name) },
+        tiles = { ("%s_%s.png"):format(world.modname, name) },
         groups = groups,
     })
 end
