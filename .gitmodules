@@ -1,0 +1,18 @@
+[submodule "mods/admintools/minetest-cloaking"]
+	path = mods/admintools/cloaking
+	url = https://github.com/luk3yx/minetest-cloaking.git
+[submodule "mods/admintools/minetest-verbana"]
+	path = mods/admintools/verbana
+	url = https://github.com/fluxionary/minetest-verbana.git
+[submodule "mods/libs/minetest-formspec_ast"]
+	path = mods/libs/minetest-formspec_ast
+	url = https://github.com/luk3yx/minetest-formspec_ast.git
+[submodule "mods/libs/minetest-fs51"]
+	path = mods/libs/minetest-fs51
+	url = https://github.com/luk3yx/minetest-fs51.git
+[submodule "mods/admintools/maptools"]
+	path = mods/admintools/maptools
+	url = https://github.com/minetest-mods/maptools.git
+[submodule "mods/admintools/snippets"]
+	path = mods/admintools/snippets
+	url = https://github.com/luk3yx/minetest-snippets.git

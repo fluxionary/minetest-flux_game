@@ -1,0 +1,182 @@
+this game will likely never make it to a usable state, but working on it is giving me something to do.
+
+worldnode:
+add soils, sand/gravel (falling), snow, ...
+
+
+nodevariant:
+e.g. "stone bricks" for "stone"
+APIs for adding certain variants
+including color variants
+
+
+ores:
+ancient metals: iron gold copper tin lead silver mercury sulfur zinc
+? arsenic antimony bismuth ? -- known but useless
+other stuff: coal diamond (some gems)
+
+
+trees:
+no mod should be defining its own treegen - register them w/ us!
+
+
+plants:
+i like lush environments
+
+
+farming:
+lots of goodies
+
+
+worldgen:
+not sure how hard it is to create something to compete w/ e.g. valleys
+
+we need 3d biomes for the underground
+e.g. lower reaches should be basically all lava
+
+create an easily extensible way for adding distinct worldgen zones defined by y level for e.g. the nether
+- or maybe 3d zones? imagine a world w/ 4 different worldgens working in the different major quadrants
+
+ideally, this should have some really neat features. giant underground caverns w/out the worry of flowing liquids
+lagging the server out. tunnel systems in the appropriate biomes. caves/large tunnels w/ neat crystaline formations.
+enormous mountains.
+
+
+exotic_worldgen:
+worldgen that adds a nether, asteroids, other stuff in the sky. perhaps off, by default.
+
+
+food:
+food primitives, e.g. "food.eat(...)"
+
+
+cooking:
+pit fire, roasting spits
+fuel-burning ovens
+bbq
+cauldron
+fermenting vat
+- for e.g. pickles, saukraut, wine, beer
+deep fryer
+
+
+housewares:
+chests, furnaces, tables,
+
+
+tools:
+
+
+metallurgy:
+alloys
+mechanisms for making alloys
+
+storage:
+
+
+logic:
+redstone/mesecons replacement
+
+
+basic storage transfer:
+think tubelib pushers and tubes, but not the rest of it
+
+
+electricity:
+a framework for adding various kinds of machines
+don't need machines outside a fuel-burning generator and an electric oven
+
+
+microblocks:
+circular saw, but w/ ability to register only for certain kinds of microblocks
+(e.g. stairs)
+
+
+climate:
+seasons should be defined, but nothing need be triggered on them in the base
+
+
+weather:
+only if it can be done w/out too much FPS drop, which i doubt
+
+
+holidays:
+events defined for specific timespans
+
+
+mobs:
+provide some actually usable mob primitives that don't induce terrible lag
+
+
+stamina:
+rewrite some basics
+- you can only eat so much of any one food at a time
+ - eat multiple foods
+ - a HUD display for what you've eaten
+- different foods give you different bonuses to your health and stamina, which fade over time
+
+irc integration:
+this is VERY LOW PRIORITY
+allow multiple irc servers w/out terrible hacks a la blocky
+
+
+communication:
+- mailboxes for various use cases
+- optional /mail command
+
+
+writing:
+writable books
+signs
+- is there a way to make signs not-terrible? probably not.
+- is there any caching done (or even do-able?) w/ the current font compositing?
+- lua port of cairo? :\
+
+
+existing mods:
+
+game utils:
+- replacer (fix)
+- screwdriver (maybe rhotator too) - make it infinitely durable
+
+admintools:
+- cloaking
+- verbana
+- snippets
+- invhack (but a version that just has a command instead of a stupid tool,
+           that lets you inspect *all* the player's inventories, or inventories
+           in their areas, or report if specified items can be found in either)
+
+
+areas & worldedit
+- for these two, have a basic mod that handles the designation of 3d volumes
+- and fix all my major gripes w/ both
+- areas should come w/ some sort of way for beginners to protect things easily (w/out commands)
+ - like areasprotector
+ - or markers
+
+ambience
+- it's nice to have sounds
+
+astral
+- it's nice to have moon phases and stuff
+
+unified_inventory
+- and +
+- but fix some of the bullshit
+- allow completely disabling the search feature
+- allow important groups like currently on blocky
+- allow disabling recipes/items until discovered
+
+loot:
+it'd be nice to actually have meaningful, usable loot
+
+epic:
+quests should be key
+
+
+
+
+
+- lots of various commands
+- improved chat (like the client-side chat  mod)

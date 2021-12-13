@@ -1,0 +1,7 @@
+TODO:
+    multiple lavas for different silica content
+    crude oil & mineral oil
+    high-temp water for geysers and underground crystal chambers
+    (https://en.wikipedia.org/wiki/Cave_of_the_Crystals)
+    muddy water - brown, red, yellow
+    contaminated water - algae blooms (green), mine tailings (blue/cyan from copper),
